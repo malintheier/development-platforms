@@ -9,8 +9,14 @@
 - **Additional purpose:** Record the student's development preferences: use `async`/`await`, reuse code, avoid duplication, and install ESLint and Prettier.
 - **Outcome:** Added these preferences to `AGENTS.md` for future project setup and implementation.
 
-## 6–7 November 2026
+## 6 November 2026
 
 - **Tool used:** Copilot Chat
 - **Purpose:** Guidance on creating and exporting the MySQL database, setting up TypeScript and Express, troubleshooting Prettier, and testing the server.
 - **Outcome:** The student carried out the setup and testing, using explanations and suggested configuration and commands when needed.
+
+## 7 November 2026
+
+- **Tool used:** Copilot Chat
+- **Purpose:** Guidance on configuring ESLint and Prettier, resolving a TypeScript version conflict, and investigating an npm audit warning.
+- **Outcome:** The student followed suggested configuration and commands, chose to override the vulnerable `minimatch` version, and checked the dependency tree, lint, build, and formatting. npm reported no known vulnerabilities, but the override forces an unsupported major version and should be reviewed when compatible updates are available.
