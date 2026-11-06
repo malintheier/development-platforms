@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/malintheier/development-platforms/issues"
   },
-  "homepage": "https://github.com/malintheier/development-platforms#readme"
+  "homepage": "https://github.com/malintheier/development-platforms#readme",
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
 }
