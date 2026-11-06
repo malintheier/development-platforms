@@ -16,6 +16,12 @@
 - When asked, help draft concise commit messages that accurately describe my changes.
 - When AI assistance is used, help me record it in `AI_LOG.md` or the README and in my written reflection.
 
+## Development Practices
+
+- Use `async`/`await` for asynchronous operations instead of promise `.then()` chains.
+- Look for existing code to reuse and avoid unnecessary duplication.
+- Set up ESLint and Prettier when configuring the project, and use them consistently.
+
 ## Collaboration
 
 - Before a project change, briefly explain the goal and the files likely to be affected.
