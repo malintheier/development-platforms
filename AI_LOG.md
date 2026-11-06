@@ -8,3 +8,9 @@
 - **Additional AI use:** The student may use Copilot Chat to draft commit messages that describe their changes.
 - **Additional purpose:** Record the student's development preferences: use `async`/`await`, reuse code, avoid duplication, and install ESLint and Prettier.
 - **Outcome:** Added these preferences to `AGENTS.md` for future project setup and implementation.
+
+## 6–7 November 2026
+
+- **Tool used:** Copilot Chat
+- **Purpose:** Guidance on creating and exporting the MySQL database, setting up TypeScript and Express, troubleshooting Prettier, and testing the server.
+- **Outcome:** The student carried out the setup and testing, using explanations and suggested configuration and commands when needed.
