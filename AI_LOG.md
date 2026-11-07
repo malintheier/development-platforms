@@ -29,3 +29,9 @@
 - **Tool used:** Copilot Chat
 - **Purpose:** Help with organising `GET /articles` using Express Router, resolving import warnings, understanding error handling, and testing the endpoint.
 - **Outcome:** I wrote and edited the router and connected it to the app myself. Copilot reviewed my code when I asked, explained import paths and variable names, and guided corrections and terminal checks. The endpoint returned an empty array for the empty articles table, and build, lint, and formatting checks passed.
+
+## 7 November 2026
+
+- **Tool used:** Copilot Chat
+- **Purpose:** Guidance on `POST /auth/register`, bcrypt hashing, request validation, duplicate email handling, and Postman testing.
+- **Outcome:** I wrote and edited the registration code myself. Copilot reviewed my attempts, explained validation and error handling, and suggested expressions, test inputs, and terminal commands. I chose the password requirements and tested registration, duplicate email responses, invalid input, and password rules, including the 8-character minimum and 72-byte maximum. Build, lint, and formatting checks passed.
