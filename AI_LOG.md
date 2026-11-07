@@ -20,3 +20,9 @@
 - **Tool used:** Copilot Chat
 - **Purpose:** Guidance on configuring ESLint and Prettier, resolving a TypeScript version conflict, and investigating an npm audit warning.
 - **Outcome:** The student followed suggested configuration and commands, chose to override the vulnerable `minimatch` version, and checked the dependency tree, lint, build, and formatting. npm reported no known vulnerabilities, but the override forces an unsupported major version and should be reviewed when compatible updates are available.
+
+## 7 November 2026
+
+- **Tool used:** Copilot Chat
+- **Purpose:** Guidance on installing `mysql2` and `dotenv`, configuring a dedicated database user with limited privileges, and using environment variables for a reusable connection pool.
+- **Outcome:** The student wrote and revised the database configuration with explanations, suggested snippets, and feedback on TypeScript errors, missing environment variables, and port validation. A suggested test command confirmed the MySQL connection; build, lint, and formatting checks passed.
