@@ -53,3 +53,9 @@
 - **Tool used:** Copilot Chat
 - **Purpose:** Guidance on replacing Express's default HTML error responses with JSON for unknown routes and malformed request bodies.
 - **Outcome:** I wrote and revised the error handlers myself. Copilot reviewed my attempts, explained middleware order and parser error identification, and guided corrections and terminal checks. I tested a 404 response for an unknown route and a 400 response for invalid JSON in Postman; both returned JSON without internal error details. Build, lint, and formatting checks passed.
+
+## 8 November 2026
+
+- **Tool used:** Copilot Chat
+- **Purpose:** Guidance on testing database error handling and checking stored password hashes and article ownership in MySQL Workbench.
+- **Outcome:** I performed the checks myself, following suggested test steps. With a temporarily incorrect database name, the API returned a general 500 error without internal details; after restoring the configuration, article retrieval returned 200. I also confirmed that the test user's password was stored as a bcrypt hash and that the test article's `submitted_by` matched the user's ID. No implementation code was changed in this step.
