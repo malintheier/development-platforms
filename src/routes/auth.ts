@@ -1,6 +1,13 @@
 import { Router } from "express";
-import { pool } from "../db.js";
+import { pool, getRequiredEnv } from "../db.js";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import type { RowDataPacket } from "mysql2";
+interface LoginUser extends RowDataPacket {
+  id: number;
+  password_hash: string;
+}
+const jwtSecret = getRequiredEnv("JWT_SECRET");
 const router = Router();
 router.post("/register", async (req, res) => {
   if (!req.body) {
@@ -88,6 +95,45 @@ router.post("/register", async (req, res) => {
       }
     }
     console.error("Failed to register user", error);
+    res.status(500).json({ error: "Internal Server Error" });
+  }
+});
+router.post("/login", async (req, res) => {
+  if (!req.body) {
+    return res.status(400).json({ error: "Request body is required" });
+  }
+  const { email, password } = req.body;
+
+  if (
+    !email ||
+    !password ||
+    typeof email !== "string" ||
+    typeof password !== "string"
+  ) {
+    return res
+      .status(400)
+      .json({ error: "Email and password must be non-empty strings" });
+  }
+  const normalizedEmail = email.trim().toLowerCase();
+  try {
+    const [rows] = await pool.query<LoginUser[]>(
+      "SELECT id, password_hash FROM users WHERE email = ?",
+      [normalizedEmail],
+    );
+    const user = rows[0];
+    if (!user) {
+      return res.status(401).json({ error: "Invalid email or password" });
+    }
+    const passwordMatch = await bcrypt.compare(password, user.password_hash);
+    if (!passwordMatch) {
+      return res.status(401).json({ error: "Invalid email or password" });
+    }
+    const token = jwt.sign({ userId: user.id }, jwtSecret, {
+      expiresIn: "1h",
+    });
+    res.json({ token });
+  } catch (error) {
+    console.error("Failed to login user", error);
     res.status(500).json({ error: "Internal Server Error" });
   }
 });

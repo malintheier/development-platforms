@@ -35,3 +35,9 @@
 - **Tool used:** Copilot Chat
 - **Purpose:** Guidance on `POST /auth/register`, bcrypt hashing, request validation, duplicate email handling, and Postman testing.
 - **Outcome:** I wrote and edited the registration code myself. Copilot reviewed my attempts, explained validation and error handling, and suggested expressions, test inputs, and terminal commands. I chose the password requirements and tested registration, duplicate email responses, invalid input, and password rules, including the 8-character minimum and 72-byte maximum. Build, lint, and formatting checks passed.
+
+## 8 November 2026
+
+- **Tool used:** Copilot Chat
+- **Purpose:** Guidance on `POST /auth/login`, bcrypt password verification, JWT signing, TypeScript errors, and Postman testing.
+- **Outcome:** I wrote and revised the login code myself. Copilot reviewed my attempts, explained request validation and database result types, and guided reuse of the environment-variable check for the JWT secret. It also suggested a key-generation command and test inputs. I tested successful login, incorrect credentials, email normalisation, missing request bodies, and invalid field types. Build, lint, and formatting checks passed.

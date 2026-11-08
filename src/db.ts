@@ -25,4 +25,4 @@ const pool: Pool = mysql.createPool({
   queueLimit: 0,
 });
 
-export { pool };
+export { pool, getRequiredEnv };
