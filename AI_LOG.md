@@ -41,3 +41,9 @@
 - **Tool used:** Copilot Chat
 - **Purpose:** Guidance on `POST /auth/login`, bcrypt password verification, JWT signing, TypeScript errors, and Postman testing.
 - **Outcome:** I wrote and revised the login code myself. Copilot reviewed my attempts, explained request validation and database result types, and guided reuse of the environment-variable check for the JWT secret. It also suggested a key-generation command and test inputs. I tested successful login, incorrect credentials, email normalisation, missing request bodies, and invalid field types. Build, lint, and formatting checks passed.
+
+## 8 November 2026
+
+- **Tool used:** Copilot Chat
+- **Purpose:** Guidance on JWT middleware, protected article creation, TypeScript errors, input validation, and Postman testing.
+- **Outcome:** I wrote and revised the middleware and article route myself. Copilot reviewed my attempts, explained errors and type safety, and suggested expressions, terminal commands, and test inputs. I tested article creation with a valid token, public article retrieval, missing and invalid inputs, and field-length boundaries. I also tested missing, malformed, invalid, and expired tokens, plus tokens with invalid user IDs. Build, lint, and formatting checks passed.
