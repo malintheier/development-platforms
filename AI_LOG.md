@@ -47,3 +47,9 @@
 - **Tool used:** Copilot Chat
 - **Purpose:** Guidance on JWT middleware, protected article creation, TypeScript errors, input validation, and Postman testing.
 - **Outcome:** I wrote and revised the middleware and article route myself. Copilot reviewed my attempts, explained errors and type safety, and suggested expressions, terminal commands, and test inputs. I tested article creation with a valid token, public article retrieval, missing and invalid inputs, and field-length boundaries. I also tested missing, malformed, invalid, and expired tokens, plus tokens with invalid user IDs. Build, lint, and formatting checks passed.
+
+## 8 November 2026
+
+- **Tool used:** Copilot Chat
+- **Purpose:** Guidance on replacing Express's default HTML error responses with JSON for unknown routes and malformed request bodies.
+- **Outcome:** I wrote and revised the error handlers myself. Copilot reviewed my attempts, explained middleware order and parser error identification, and guided corrections and terminal checks. I tested a 404 response for an unknown route and a 400 response for invalid JSON in Postman; both returned JSON without internal error details. Build, lint, and formatting checks passed.
