@@ -29,6 +29,14 @@ const errorHandler: ErrorRequestHandler = (error, req, res, next) => {
   ) {
     return res.status(400).json({ error: "Invalid JSON in request body" });
   }
+  if (
+    typeof error === "object" &&
+    error !== null &&
+    "type" in error &&
+    error.type === "entity.too.large"
+  ) {
+    return res.status(413).json({ error: "Request body too large" });
+  }
   console.error(error);
   res.status(500).json({ error: "Internal Server Error" });
 };

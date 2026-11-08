@@ -31,7 +31,7 @@ router.post("/register", async (req, res) => {
     normalizedEmail.split("@").length !== 2 ||
     normalizedEmail.startsWith("@") ||
     normalizedEmail.endsWith("@") ||
-    normalizedEmail.includes(" ")
+    /\s/.test(normalizedEmail)
   ) {
     return res.status(400).json({
       error:
